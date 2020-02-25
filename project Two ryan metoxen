@@ -1,0 +1,36 @@
+'''
+Created on Feb 24, 2020
+
+@author: ITAUser
+'''
+from random import randint
+    
+#create a list of play options
+x = ["Rock", "Paper", "Scissors"]
+
+#assign a random play to the computer
+computer = x[randint(0,2)]
+
+#set player to False
+player = False
+
+while player == False:
+#set player to True
+    player = input("Rock, Paper, Scissors?")
+    if player == computer:
+        print("Tie!")
+    elif player == "Rock":
+        if computer == "Paper":
+            print("You lose!", "cover")
+        else:
+            print("You win!")
+    elif player == "Paper":
+        if computer == "Scissors":
+            print("You lose!","cut")
+        else:
+            print("You win!")
+    elif player == "Scissors":
+        if computer == "Rock":
+            print("You lose...","smash")
+        else:
+            print("You win!")
